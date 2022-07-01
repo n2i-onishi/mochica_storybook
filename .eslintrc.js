@@ -7,6 +7,7 @@ module.exports = {
     "plugin:vue/essential",
     "eslint:recommended",
     "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
   ],
   parserOptions: {
     parser: "@babel/eslint-parser",
@@ -14,5 +15,6 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "lint:js": 'eslint --ext ".js,.vue" --ignore-path .gitignore .',
   },
 };
